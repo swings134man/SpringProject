@@ -17,5 +17,4 @@ public class GenericTruckUse {
 		System.out.println(t2);
 		
 	}
-
 }
