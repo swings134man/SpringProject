@@ -10,15 +10,11 @@
 welcome! login page!
 <hr color="red">
 <hr>
-<form action="insertC.co">
+<form action="one.do">
 	id: <input name="id"> <br>
-	pw: <input name="pw"> <br>
-	name: <input name="name"> <br>
-	tel: <input name="tel"> <br>
-	<button>로그인!</button> 
+	<button>회원정보 검색</button> 
 </form>
 <hr>
 
-	아이디 검색 
 </body>
 </html>

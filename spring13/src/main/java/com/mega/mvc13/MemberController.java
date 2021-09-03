@@ -2,6 +2,7 @@ package com.mega.mvc13;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 // 싱글톤 객체, 스프링에 컨트롤로 등록. 
@@ -19,7 +20,16 @@ public class MemberController {
 		
 	}
 	
-	
+	@RequestMapping("one.do")
+	public void one(MemberDTO memberDTO, Model model) {
+		System.out.println(memberDTO.getId());
+		MemberDTO dto = dao.read(memberDTO);
+		// dto의 데이터는 views/one.jsp 로 출려되어야 클라이언트에게 보인다.
+		// model 속성을 이용하면 views아래까지 데이터를보내고, 사라진다.
+		System.out.println("DAO에서 넘어온 내용: " + dto);
+		model.addAttribute("bag", dto);
+		
+	}
 	
 	
 	

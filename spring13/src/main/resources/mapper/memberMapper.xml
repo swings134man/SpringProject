@@ -4,4 +4,12 @@
 	<insert id="create" parameterType="dto">
 		insert into MEMBER values (#{id},#{pw},#{name},#{tel})
 	</insert>
+	<select id="all"></select>
+	
+	<select id="one" parameterType="dto" resultType="dto" >
+		select * from MEMBER where id = #{id}
+	</select>
+	
+	<delete id="del"></delete>
+	<update id="up"></update>
 </mapper>

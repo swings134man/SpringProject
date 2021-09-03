@@ -23,13 +23,17 @@ public class MemberDAO {
 		return result;
 	}//login
 	
+	
 	public void create(MemberDTO memberDTO) {
 		myBatis.insert("memberMapper.create", memberDTO);
-		
 	}
 	
-	public void read() {
-		
+	
+	public MemberDTO read(MemberDTO memberDTO) {
+		System.out.println(memberDTO.getId());
+		MemberDTO dto = myBatis.selectOne("memberMapper.one", memberDTO);
+		System.out.println("DB에서 dto에 저장된 내용: " + dto);
+		return dto;
 	}
 	
 	public void update() {
