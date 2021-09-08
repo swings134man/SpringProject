@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>bbs</title>
+<link rel="stylesheet" href="resources/css/out.css">
 </head>
 <body>
 bbs page ! 
@@ -23,8 +24,9 @@ bbs page !
 </form>
 <hr>
 
-<a href="blist.mega">전체목록 가져오기</a>
+<a href="blist.mega">전체목록 가져오기</a> <br>
 
+<img alt="" src="resources/img/apple.png" width="150" height="150">
 
 </body>
 </html>

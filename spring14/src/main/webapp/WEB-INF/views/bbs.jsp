@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>bbs결과창</title>
+<link rel="stylesheet" href="resources/css/out.css">
 </head>
 <body>
 게시물 DB저장후 이페이지 오픈! <br>

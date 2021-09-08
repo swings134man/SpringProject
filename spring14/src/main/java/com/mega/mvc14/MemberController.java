@@ -73,7 +73,6 @@ public class MemberController {
 	
 	@RequestMapping("list.mega")
 	public void list(Model model) {
-		
 		List<MemberDTO> list = dao.list();
 		model.addAttribute("list", list);
 			System.out.println("전체 개수 : " + list.size());
