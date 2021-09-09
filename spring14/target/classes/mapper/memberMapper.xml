@@ -18,4 +18,9 @@
 	</delete>
 	
 	<update id="up"></update>
+	
+	<select id="check2" parameterType="dto" resultType="dto" >
+		select id from MEMBER where id = #{id}
+	</select>
+	
 </mapper>

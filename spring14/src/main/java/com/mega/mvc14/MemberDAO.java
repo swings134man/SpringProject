@@ -44,13 +44,14 @@ public class MemberDAO {
 		return list;
 	}
 	
-	public void update() {
-		
-	}
-	
 	public int delete(MemberDTO memberDTO) {
 		int result = myBatis.delete("memberMapper.del", memberDTO);
 		return result;
+	}
+	
+	public MemberDTO check2(MemberDTO memberDTO) {
+		MemberDTO dto= myBatis.selectOne("memberMapper.check2", memberDTO);
+		return dto;
 	}
 	
 	

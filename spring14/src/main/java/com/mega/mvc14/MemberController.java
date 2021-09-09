@@ -30,7 +30,6 @@ public class MemberController {
 		// model 속성을 이용하면 views아래까지 데이터를보내고, 사라진다.
 		System.out.println("DAO에서 넘어온 내용: " + dto);
 		model.addAttribute("bag", dto);
-		
 	}
 	
 	
@@ -87,5 +86,17 @@ public class MemberController {
 		}else {
 			return "one";
 		}
+	}
+	
+	
+	@RequestMapping("check2.mega")
+	public void check(MemberDTO memberDTO, Model model) {
+		System.out.println(memberDTO);
+		MemberDTO dto= dao.check2(memberDTO);
+		String result = "중복된 아이디가 없습니다. 사용가능";
+		if (dto != null) {
+			result = "중복된 아이디가 있습니다. 사용불가합니다";
+		}
+		model.addAttribute("result", result);
 	}
 }
